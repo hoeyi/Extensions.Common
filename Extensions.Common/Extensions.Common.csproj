@@ -16,7 +16,7 @@
         <Product>Ichosoft.Extensions.Common</Product>
         <VersionPrefix>1.0.0</VersionPrefix>
         <Version>$(VersionPrefix).$(BuildNumber)</Version>
-        <Description>Extension methods for types in the System namespace.</Description>
+        <Description>Extension methods for commonly-used types in .NET, primarily for types in the System namespace.</Description>
         <Copyright>2021 ihoey</Copyright>
         <PackageProjectUrl>https://github.com/Ichosoft/Extensions.Common</PackageProjectUrl>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
