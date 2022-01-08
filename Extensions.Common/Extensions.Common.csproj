@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <AssemblyName>Ichosoft.Extensions.Common</AssemblyName>
+        <RootNamespace>Ichosoft.Extensions.Common</RootNamespace>
+        <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+
+        <PackageId>Ichosoft.Extensions.Common</PackageId>
+        <BuildNumber Condition="$(BuildNumber) == ''">0</BuildNumber>
+        <!--Comment out build number to avoid auto-updating project build properties. Uncomment for release builds only.-->
+        <!--<BuildNumber>$([System.DateTime]::UtcNow.ToString(mmff))</BuildNumber>-->
+        <Authors>hoeyi</Authors>
+        <Company>hoeyi</Company>
+        <Product>Ichosoft.Extensions.Common</Product>
+        <VersionPrefix>1.0.0</VersionPrefix>
+        <Version>$(VersionPrefix).$(BuildNumber)</Version>
+        <Description>Extension methods for types in the System namespace.</Description>
+        <Copyright>2021 ihoey</Copyright>
+        <PackageProjectUrl>https://github.com/Ichosoft/Extensions.Common</PackageProjectUrl>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+
+        <!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+
+        <!-- Optional: Embed source files that are not tracked by the source control manager in the PDB -->
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+
+        <!-- Optional: Build symbol package (.snupkg) to distribute the PDB containing Source Link -->
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\LICENSE.md">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
+
+</Project>
