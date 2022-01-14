@@ -14,7 +14,7 @@
         <Authors>hoeyi</Authors>
         <Company>hoeyi</Company>
         <Product>Ichosoft.Extensions.Common</Product>
-        <VersionPrefix>1.0.0</VersionPrefix>
+        <VersionPrefix>1.0.1</VersionPrefix>
         <Version>$(VersionPrefix).$(BuildNumber)</Version>
         <Description>Extension methods for commonly-used types in .NET, primarily for types in the System namespace.</Description>
         <Copyright>2021 ihoey</Copyright>
@@ -34,6 +34,14 @@
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="CREDITS.md" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="CREDITS.md" />
+    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
