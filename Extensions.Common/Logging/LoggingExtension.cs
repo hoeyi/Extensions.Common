@@ -1,9 +1,9 @@
-namespace Ichosoft.Extensions.Common
+namespace Ichosoft.Extensions.Common.Logging
 {
     /// <summary>
     /// Provides static helper methods for working with strings.
     /// </summary>
-    public static class Logging
+    public static class LoggingExtension
     {
         /// <summary>
         /// Converts the string to a log template string by replacing braced integers.
