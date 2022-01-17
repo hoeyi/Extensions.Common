@@ -3,7 +3,7 @@ namespace Ichosoft.Extensions.Common
     /// <summary>
     /// Provides static helper methods for working with strings.
     /// </summary>
-    public static class StringExtension
+    public static class Logging
     {
         /// <summary>
         /// Converts the string to a log template string by replacing braced integers.
