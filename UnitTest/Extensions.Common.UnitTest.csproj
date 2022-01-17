@@ -4,6 +4,10 @@
     <TargetFramework>net5.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <AssemblyName>Ichosoft.Extensions.Common.UnitTest</AssemblyName>
+
+    <RootNamespace>Ichosoft.Extensions.Common.UnitTest</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,10 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Ichosoft.Extensions.Common;
+using Ichosoft.Extensions.Common.Logging;
 
-namespace Extensions.Common.UnitTest
+namespace Ichosoft.Extensions.Common.UnitTest
 {
     [TestClass]
-    public class StringTest
+    public class LoggingTests
     {
         [TestMethod]
         public void ConvertToLogTemplate_ValidEntry_YieldsExpectedString()
