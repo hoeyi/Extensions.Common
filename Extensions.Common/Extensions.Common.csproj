@@ -21,7 +21,8 @@
         <PackageProjectUrl>https://github.com/Ichosoft/Extensions.Common</PackageProjectUrl>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-
+        
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 
         <!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
