@@ -380,11 +380,10 @@ namespace Ichosoft.Extensions.Common.Localization
 
             return value.ToString(format);
         }
-        
+
         #endregion
 
         #region String converter extension methods
-        public static string[] CustomShortDatePatterns { get; set; } = Array.Empty<string>();
 
         /// <summary>
         /// Converts this string into a <see cref="DateTime"/> value, using culture-specific
@@ -394,9 +393,20 @@ namespace Ichosoft.Extensions.Common.Localization
         /// <returns>A <see cref="DateTime"/> if converted successfully, else null.</returns>
         public static DateTime? ConvertToDateTime(this string s)
         {
+            return s.ConvertToDateTime(Array.Empty<string>());
+        }
+
+        /// <summary>
+        /// Converts this string into a <see cref="DateTime"/> value, using a matching 
+        /// culture date time format, or a matching custom pattern.
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="customPatterns">An array of additional allowed patterns.</param>
+        /// <returns>A <see cref="DateTime"/> if converted successfully, else null.</returns>
+        public static DateTime? ConvertToDateTime(this string s, params string[] customPatterns)
+        {
             if (string.IsNullOrEmpty(s))
                 return null;
-
             try
             {
                 // Try to convert using CultureInfo
@@ -407,8 +417,11 @@ namespace Ichosoft.Extensions.Common.Localization
             }
             try
             {
+                if (customPatterns is null || customPatterns.Length == 0)
+                    return null;
+
                 // Check each format and break the loop when the first result is found.
-                foreach (var pattern in CustomShortDatePatterns)
+                foreach (var pattern in customPatterns)
                 {
                     if (DateTime.TryParseExact(
                         s: s,
