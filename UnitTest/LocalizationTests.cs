@@ -34,15 +34,16 @@ namespace Ichosoft.Extensions.Common.UnitTest
             var ctrlCulture = new CultureInfo("en-US");
             var expCulture = new CultureInfo("de-DE");
 
-            CultureInfo.CurrentCulture = expCulture;
-            CultureInfo.CurrentUICulture = CultureInfo.CurrentUICulture;
-
+            SetCulture(expCulture);
+            
             Debug.WriteLine($"Observed< {value.ToLocalizedString()} >");
             Debug.WriteLine($"Expected<! {nonNullvalue.ToString(ctrlCulture)} >");
 
             Assert.IsNull(nullValue.ToLocalizedString());
             Assert.AreNotEqual(nonNullvalue.ToString(ctrlCulture), value.ToLocalizedString());
             Assert.AreEqual(nonNullvalue.ToString(expCulture), value.ToLocalizedString());
+
+            SetCulture(new("en-US"));
         }
 
         [TestMethod]
@@ -55,8 +56,7 @@ namespace Ichosoft.Extensions.Common.UnitTest
             var ctrlCulture = new CultureInfo("en-US");
             var expCulture = new CultureInfo("de-DE");
 
-            CultureInfo.CurrentCulture = expCulture;
-            CultureInfo.CurrentUICulture = CultureInfo.CurrentUICulture;
+            SetCulture(expCulture);
 
             Debug.WriteLine($"Observed< {value.ToLocalizedString()} >");
             Debug.WriteLine($"Expected<! {nonNullvalue.ToString(ctrlCulture)} >");
@@ -64,6 +64,8 @@ namespace Ichosoft.Extensions.Common.UnitTest
             Assert.IsNull(nullValue.ToLocalizedString());
             Assert.AreNotEqual(nonNullvalue.ToString(ctrlCulture), value.ToLocalizedString());
             Assert.AreEqual(nonNullvalue.ToString(expCulture), value.ToLocalizedString());
+
+            SetCulture(new("en-US"));
         }
 
         [TestMethod]
@@ -90,14 +92,15 @@ namespace Ichosoft.Extensions.Common.UnitTest
             var ctrlCulture = new CultureInfo("en-US");
             var expCulture = new CultureInfo("de-DE");
 
-            CultureInfo.CurrentCulture = expCulture;
-            CultureInfo.CurrentUICulture = CultureInfo.CurrentUICulture;
+            SetCulture(expCulture);
 
             Debug.WriteLine($"Observed< {value.ToLocalizedString()} >");
             Debug.WriteLine($"Expected<! {nonNullvalue.ToString(ctrlCulture.NumberFormat.CurrencySymbol)} >");
 
             Assert.IsNull(nullValue.ToLocalizedString());
             Assert.AreNotEqual(nonNullvalue.ToString(ctrlCulture.NumberFormat.CurrencySymbol), value.ToLocalizedString());
+
+            SetCulture(new("en-US"));
         }
 
         [TestMethod]
@@ -116,15 +119,15 @@ namespace Ichosoft.Extensions.Common.UnitTest
             string dateTime = "13.02.2021";
 
             CultureInfo expCulture = new("de-DE");
-            CultureInfo ctrlCulture = new("en-US");
 
-            CultureInfo.CurrentCulture = expCulture;
-            CultureInfo.CurrentUICulture = CultureInfo.CurrentUICulture;
+            SetCulture(expCulture);
 
             DateTime observed = dateTime.ConvertToDateTime() ?? default;
             DateTime expected = new(2021, 2, 13);
 
             Assert.AreEqual(expected, observed);
+
+            SetCulture(new("en-US"));
         }
 
         [TestMethod]
@@ -135,20 +138,33 @@ namespace Ichosoft.Extensions.Common.UnitTest
             CultureInfo expCulture = new("de-DE");
             CultureInfo ctrlCulture = new("en-US");
 
-            CultureInfo.CurrentCulture = ctrlCulture;
-            CultureInfo.CurrentUICulture = CultureInfo.CurrentUICulture;
+            SetCulture(ctrlCulture);
 
             DateTime? observed = dateTime.ConvertToDateTime();
 
             Assert.IsNull(observed);
 
-            CultureInfo.CurrentCulture = expCulture;
-            CultureInfo.CurrentUICulture = CultureInfo.CurrentCulture;
+            SetCulture(expCulture);
 
             observed = dateTime.ConvertToDateTime();
 
             Assert.IsNotNull(observed);
+
+            SetCulture(new("en-US"));
         }
+
+        [TestMethod] 
+        public void ConvertToDateTime_ValidInput_WithPattern_YieldsExpectedDateTime()
+        {
+            string dateTime = "13.02.2021";
+
+            DateTime? observed = dateTime.ConvertToDateTime("dd.MM.yyyy");
+            DateTime? observedDefaultCulture = dateTime.ConvertToDateTime();
+
+            Assert.AreEqual(new DateTime(2021, 2, 13), observed);
+            Assert.IsNull(observedDefaultCulture);
+        }
+
 
         [TestMethod]
         public void ConvertToDateTime_InvalidInput_YieldsNull()
@@ -172,6 +188,15 @@ namespace Ichosoft.Extensions.Common.UnitTest
             Debug.WriteLine($"Observed< {observed} >");
             Debug.WriteLine($"Expected< {expected} >");
             Assert.AreEqual(observed, expected);
+        }
+
+        private static void SetCulture(CultureInfo cultureInfo)
+        {
+            if (cultureInfo is null)
+                throw new ArgumentNullException(paramName: nameof(cultureInfo));
+
+            CultureInfo.CurrentCulture = cultureInfo;
+            CultureInfo.CurrentUICulture = CultureInfo.CurrentCulture;
         }
     }
 }
