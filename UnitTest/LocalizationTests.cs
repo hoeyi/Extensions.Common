@@ -15,8 +15,6 @@ namespace Ichosoft.Extensions.Common.UnitTest
             DateTime? value = new(2021, 1, 1);
             DateTime? nullValue = null;
 
-            float f = default;
-
             SetCulture(new("en-US"));
 
             Assert.IsNull(nullValue?.ToString(CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern));
