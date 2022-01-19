@@ -14,7 +14,7 @@
         <Authors>hoeyi</Authors>
         <Company>hoeyi</Company>
         <Product>Ichosoft.Extensions.Common</Product>
-        <VersionPrefix>1.2.1</VersionPrefix>
+        <VersionPrefix>1.3.0</VersionPrefix>
         <Version>$(VersionPrefix).$(BuildNumber)</Version>
         <Description>Extension methods for commonly-used types in .NET, primarily for types in the System namespace.</Description>
         <Copyright>2021 ihoey</Copyright>
