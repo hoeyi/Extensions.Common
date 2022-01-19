@@ -11,96 +11,21 @@ namespace Ichosoft.Extensions.Common.UnitTest
     public class LocalizationTests
     {
         [TestMethod]
-        public void ToLocalizedString_DateTime_NoInput_YieldsMatchingString()
+        public void ToString_NullableDateTime_DifferentCultures_YieldsExpectedFormat()
         {
-            DateTime? nullValue = null;
             DateTime? value = new(2021, 1, 1);
-            DateTime nonNullvalue = value ?? default;
-
-            Debug.WriteLine($"Observed< {value.ToLocalizedString()} >");
-            Debug.WriteLine($"Expected< {nonNullvalue} >");
-
-            Assert.IsNull(nullValue.ToLocalizedString());
-            Assert.AreEqual(nonNullvalue.ToString(), value.ToLocalizedString());
-        }
-
-        [TestMethod]
-        public void ToLocalizedString_DateTime_CultureInput_YieldsExpectedString()
-        {
             DateTime? nullValue = null;
-            DateTime? value = new(2021, 1, 1);
-            DateTime nonNullvalue = value ?? default;
-
-            var ctrlCulture = new CultureInfo("en-US");
-            var expCulture = new CultureInfo("de-DE");
-
-            SetCulture(expCulture);
-            
-            Debug.WriteLine($"Observed< {value.ToLocalizedString()} >");
-            Debug.WriteLine($"Expected<! {nonNullvalue.ToString(ctrlCulture)} >");
-
-            Assert.IsNull(nullValue.ToLocalizedString());
-            Assert.AreNotEqual(nonNullvalue.ToString(ctrlCulture), value.ToLocalizedString());
-            Assert.AreEqual(nonNullvalue.ToString(expCulture), value.ToLocalizedString());
 
             SetCulture(new("en-US"));
-        }
 
-        [TestMethod]
-        public void ToLocalizedString_DateTime_FormatInput_YieldsExpectedString()
-        {
-            DateTime? nullValue = null;
-            DateTime? value = new(2021, 1, 1);
-            DateTime nonNullvalue = value ?? default;
+            Assert.IsNull(nullValue?.ToString(CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern));
+            Assert.AreEqual("1/1/2021", value?.ToString(CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern));
 
-            var ctrlCulture = new CultureInfo("en-US");
-            var expCulture = new CultureInfo("de-DE");
+            SetCulture(new("de-DE"));
 
-            SetCulture(expCulture);
+            Assert.AreEqual("01.01.2021", value?.ToString(CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern));
 
-            Debug.WriteLine($"Observed< {value.ToLocalizedString()} >");
-            Debug.WriteLine($"Expected<! {nonNullvalue.ToString(ctrlCulture)} >");
-
-            Assert.IsNull(nullValue.ToLocalizedString());
-            Assert.AreNotEqual(nonNullvalue.ToString(ctrlCulture), value.ToLocalizedString());
-            Assert.AreEqual(nonNullvalue.ToString(expCulture), value.ToLocalizedString());
-
-            SetCulture(new("en-US"));
-        }
-
-        [TestMethod]
-        public void ToLocalizedString_Decimal_NoInput_YieldsMatchingString()
-        {
-            decimal? nullValue = null;
-            decimal? value = new decimal(1.25);
-            decimal nonNullvalue = value ?? default;
-
-            Debug.WriteLine($"Observed< {value.ToLocalizedString()} >");
-            Debug.WriteLine($"Expected< {nonNullvalue} >");
-
-            Assert.IsNull(nullValue.ToLocalizedString());
-            Assert.AreEqual(nonNullvalue.ToString(), value.ToLocalizedString());
-        }
-
-        [TestMethod]
-        public void ToLocalizedString_Decimal_CultureInput_YieldsNonMatchingString()
-        {
-            decimal? nullValue = null;
-            decimal? value = new decimal(1.25);
-            decimal nonNullvalue = value ?? default;
-
-            var ctrlCulture = new CultureInfo("en-US");
-            var expCulture = new CultureInfo("de-DE");
-
-            SetCulture(expCulture);
-
-            Debug.WriteLine($"Observed< {value.ToLocalizedString()} >");
-            Debug.WriteLine($"Expected<! {nonNullvalue.ToString(ctrlCulture.NumberFormat.CurrencySymbol)} >");
-
-            Assert.IsNull(nullValue.ToLocalizedString());
-            Assert.AreNotEqual(nonNullvalue.ToString(ctrlCulture.NumberFormat.CurrencySymbol), value.ToLocalizedString());
-
-            SetCulture(new("en-US"));
+            SetCulture();
         }
 
         [TestMethod]
@@ -190,12 +115,14 @@ namespace Ichosoft.Extensions.Common.UnitTest
             Assert.AreEqual(observed, expected);
         }
 
-        private static void SetCulture(CultureInfo cultureInfo)
+        /// <summary>
+        /// Sets the current UI culture. If no culture is provided, en-US 
+        /// is used.
+        /// </summary>
+        /// <param name="cultureInfo">The new <see cref="CultureInfo"/> to use.</param>
+        private static void SetCulture(CultureInfo cultureInfo = null)
         {
-            if (cultureInfo is null)
-                throw new ArgumentNullException(paramName: nameof(cultureInfo));
-
-            CultureInfo.CurrentCulture = cultureInfo;
+            CultureInfo.CurrentCulture = cultureInfo ?? new("en_US");
             CultureInfo.CurrentUICulture = CultureInfo.CurrentCulture;
         }
     }

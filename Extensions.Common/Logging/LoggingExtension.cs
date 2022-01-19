@@ -9,7 +9,7 @@ namespace Ichosoft.Extensions.Common.Logging
         /// Converts the string to a log template string by replacing braced integers.
         /// </summary>
         /// <param name="template">The string template.</param>
-        /// <param name="parameterNames">The string names of the parameters to use in loggging.</param>
+        /// <param name="parameterNames">The string names of the parameters to use in the log entry.</param>
         /// <returns>A string template suitable for structured logging.</returns>
         /// <example>
         ///     var template = "{0} {1}";
