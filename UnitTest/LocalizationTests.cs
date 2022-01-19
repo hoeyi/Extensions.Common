@@ -1,5 +1,4 @@
 ﻿using Ichosoft.Extensions.Common.Localization;
-using Ichosoft.Extensions.Common;
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
@@ -15,6 +14,8 @@ namespace Ichosoft.Extensions.Common.UnitTest
         {
             DateTime? value = new(2021, 1, 1);
             DateTime? nullValue = null;
+
+            float f = default;
 
             SetCulture(new("en-US"));
 

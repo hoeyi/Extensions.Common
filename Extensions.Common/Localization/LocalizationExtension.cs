@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Globalization;
-using System.Threading;
 
 namespace Ichosoft.Extensions.Common.Localization
 {
