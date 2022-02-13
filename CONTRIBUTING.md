@@ -1,4 +1,4 @@
-# Contributing to `Extensions.Common` #
+# Contributing to Extensions.Common #
 
 * [Commit Message Guidelines](#commit-message-guidelines)
 * [Object Naming Conventions](#object-naming-conventions)
