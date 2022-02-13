@@ -1,4 +1,4 @@
-# Contributing to Extensions.Common #
+# Contributing to `Extensions.Common` #
 
 * [Commit Message Guidelines](#commit-message-guidelines)
 * [Object Naming Conventions](#object-naming-conventions)
@@ -62,4 +62,4 @@ Resolves #42 (where #42 is the GitHub issue no.)
 ```
 
 ## Object Naming Conventions ##
-*Define object naming conventions specific to this project.*
+This project uses naming conventions described in [C# Coding Conventions | Microsoft](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions).
