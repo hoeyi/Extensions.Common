@@ -1,4 +1,4 @@
-# Ichosoft.Extensions.Common #
+# Ichosys.Extensions.Common #
 This library contains extension methods for commonly-used types in .NET, primarily for types in the System namespace. 
 
 * [Building Project](#building-prjoject)

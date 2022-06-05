@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>Ichosoft.Extensions.Common</name>
+        <name>Ichosys.Extensions.Common</name>
     </assembly>
     <members>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.DateTime})">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.DateTime})">
             <summary>
             Converts the <see cref="T:System.DateTime"/> to a localized string representation.
             </summary>
@@ -14,7 +14,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.DateTime},System.IFormatProvider)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.DateTime},System.IFormatProvider)">
             <summary>
             Converts the <see cref="T:System.DateTime"/> to a localized string representation.
             </summary>
@@ -25,7 +25,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.DateTime},System.String)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.DateTime},System.String)">
             <summary>
             Converts the <see cref="T:System.DateTime"/> to a localized string representation.
             </summary>
@@ -36,7 +36,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Decimal})">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Decimal})">
             <summary>
             Converts the <see cref="T:System.Decimal"/> to a localized string representation.
             </summary>
@@ -46,7 +46,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Decimal},System.IFormatProvider)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Decimal},System.IFormatProvider)">
             <summary>
             Converts the <see cref="T:System.Decimal"/> to a localized string representation.
             </summary>
@@ -57,7 +57,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Decimal},System.String)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Decimal},System.String)">
             <summary>
             Converts the <see cref="T:System.Decimal"/> to a localized string representation.
             </summary>
@@ -68,7 +68,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int16})">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int16})">
             <summary>
             Converts the <see cref="T:System.Int16"/> to a localized string representation.
             </summary>
@@ -78,7 +78,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int16},System.IFormatProvider)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int16},System.IFormatProvider)">
             <summary>
             Converts the <see cref="T:System.Int16"/> to a localized string representation.
             </summary>
@@ -89,7 +89,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int16},System.String)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int16},System.String)">
             <summary>
             Converts the <see cref="T:System.Int16"/> to a localized string representation.
             </summary>
@@ -100,7 +100,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int32})">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int32})">
             <summary>
             Converts the <see cref="T:System.Int32"/> to a localized string representation.
             </summary>
@@ -110,7 +110,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int32},System.IFormatProvider)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int32},System.IFormatProvider)">
             <summary>
             Converts the <see cref="T:System.Int32"/> to a localized string representation.
             </summary>
@@ -121,7 +121,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int32},System.String)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int32},System.String)">
             <summary>
             Converts the <see cref="T:System.Int32"/> to a localized string representation.
             </summary>
@@ -132,7 +132,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int64})">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int64})">
             <summary>
             Converts the <see cref="T:System.Int64"/> to a localized string representation.
             </summary>
@@ -142,7 +142,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int64},System.IFormatProvider)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int64},System.IFormatProvider)">
             <summary>
             Converts the <see cref="T:System.Int64"/> to a localized string representation.
             </summary>
@@ -153,7 +153,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int64},System.String)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Int64},System.String)">
             <summary>
             Converts the <see cref="T:System.Int64"/> to a localized string representation.
             </summary>
@@ -164,7 +164,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Double})">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Double})">
             <summary>
             Converts the <see cref="T:System.Double"/> to a localized string representation.
             </summary>
@@ -174,7 +174,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Double},System.IFormatProvider)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Double},System.IFormatProvider)">
             <summary>
             Converts the <see cref="T:System.Double"/> to a localized string representation.
             </summary>
@@ -185,7 +185,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Double},System.String)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Double},System.String)">
             <summary>
             Converts the <see cref="T:System.Double"/> to a localized string representation.
             </summary>
@@ -196,7 +196,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Single})">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Single})">
             <summary>
             Converts the <see cref="T:System.Single"/> to a localized string representation.
             </summary>
@@ -206,7 +206,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Single},System.IFormatProvider)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Single},System.IFormatProvider)">
             <summary>
             Converts the <see cref="T:System.Single"/> to a localized string representation.
             </summary>
@@ -217,7 +217,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Single},System.String)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToLocalizedString(System.Nullable{System.Single},System.String)">
             <summary>
             Converts the <see cref="T:System.Single"/> to a localized string representation.
             </summary>
@@ -228,7 +228,7 @@
             by format.
             </returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ConvertToDateTime(System.String)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ConvertToDateTime(System.String)">
             <summary>
             Converts this string into a <see cref="T:System.DateTime"/> value, using culture-specific
             date formats.
@@ -236,7 +236,7 @@
             <param name="s"></param>
             <returns>A <see cref="T:System.DateTime"/> if converted successfully, else null.</returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ConvertToDateTime(System.String,System.String[])">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ConvertToDateTime(System.String,System.String[])">
             <summary>
             Converts this string into a <see cref="T:System.DateTime"/> value, using a matching 
             culture date time format, or a matching custom pattern.
@@ -245,14 +245,14 @@
             <param name="customPatterns">An array of additional allowed patterns.</param>
             <returns>A <see cref="T:System.DateTime"/> if converted successfully, else null.</returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToTitleCase(System.String)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToTitleCase(System.String)">
             <summary>
             Converts this string to title case using the current culture.
             </summary>
             <param name="s"></param>
             <returns>The <see cref="T:System.String"/>, converted to title case.</returns>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Localization.LocalizationExtension.ToTitleCase(System.String,System.Globalization.CultureInfo)">
+        <member name="M:Ichosys.Extensions.Common.Localization.LocalizationExtension.ToTitleCase(System.String,System.Globalization.CultureInfo)">
             <summary>
             Converts this string to title case using the given culture.
             </summary>
@@ -260,12 +260,12 @@
             <param name="cultureInfo">The <see cref="T:System.Globalization.CultureInfo"/> to use as a formatting provider.</param>
             <returns>The <see cref="T:System.String"/>, converted to title case.</returns>
         </member>
-        <member name="T:Ichosoft.Extensions.Common.Logging.LoggingExtension">
+        <member name="T:Ichosys.Extensions.Common.Logging.LoggingExtension">
             <summary>
             Provides static helper methods for working with strings.
             </summary>
         </member>
-        <member name="M:Ichosoft.Extensions.Common.Logging.LoggingExtension.ConvertToLogTemplate(System.String,System.String[])">
+        <member name="M:Ichosys.Extensions.Common.Logging.LoggingExtension.ConvertToLogTemplate(System.String,System.String[])">
             <summary>
             Converts the string to a log template string by replacing braced integers.
             </summary>

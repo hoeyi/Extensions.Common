@@ -1,10 +1,10 @@
-﻿using Ichosoft.Extensions.Common.Localization;
+﻿using Ichosys.Extensions.Common.Localization;
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 using System.Globalization;
 
-namespace Ichosoft.Extensions.Common.UnitTest
+namespace Ichosys.Extensions.Common.UnitTest
 {
     [TestClass]
     public class LocalizationTests

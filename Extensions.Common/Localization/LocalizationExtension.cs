@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Ichosoft.Extensions.Common.Localization
+namespace Ichosys.Extensions.Common.Localization
 {
     /// <summary>
     /// Extensions methods for supporting localization.

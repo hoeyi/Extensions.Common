@@ -1,13 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
 
-    <AssemblyName>Ichosoft.Extensions.Common.UnitTest</AssemblyName>
+    <AssemblyName>Ichosys.Extensions.Common.UnitTest</AssemblyName>
 
-    <RootNamespace>Ichosoft.Extensions.Common.UnitTest</RootNamespace>
+    <RootNamespace>Ichosys.Extensions.Common.UnitTest</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

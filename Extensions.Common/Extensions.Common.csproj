@@ -2,23 +2,23 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
-        <AssemblyName>Ichosoft.Extensions.Common</AssemblyName>
-        <RootNamespace>Ichosoft.Extensions.Common</RootNamespace>
+        <AssemblyName>Ichosys.Extensions.Common</AssemblyName>
+        <RootNamespace>Ichosys.Extensions.Common</RootNamespace>
         <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
         <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
 
-        <PackageId>Ichosoft.Extensions.Common</PackageId>
+        <PackageId>Ichosys.Extensions.Common</PackageId>
         <BuildNumber Condition="$(BuildNumber) == ''">0</BuildNumber>
         <!--Comment out build number to avoid auto-updating project build properties. Uncomment for release builds only.-->
         <!--<BuildNumber>$([System.DateTime]::UtcNow.ToString(mmff))</BuildNumber>-->
         <Authors>hoeyi</Authors>
         <Company>hoeyi</Company>
-        <Product>Ichosoft.Extensions.Common</Product>
+        <Product>Ichosys.Extensions.Common</Product>
         <VersionPrefix>1.3.0</VersionPrefix>
         <Version>$(VersionPrefix).$(BuildNumber)</Version>
         <Description>Extension methods for commonly-used types in .NET, primarily for types in the System namespace.</Description>
         <Copyright>2021 ihoey</Copyright>
-        <PackageProjectUrl>https://github.com/Ichosoft/Extensions.Common</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/Ichosys/Extensions.Common</PackageProjectUrl>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         

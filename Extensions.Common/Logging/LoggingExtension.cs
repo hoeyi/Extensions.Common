@@ -1,4 +1,4 @@
-namespace Ichosoft.Extensions.Common.Logging
+namespace Ichosys.Extensions.Common.Logging
 {
     /// <summary>
     /// Provides static helper methods for working with strings.
