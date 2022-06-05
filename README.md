@@ -15,7 +15,7 @@ This library maintains the following API for consumption:
 ### Extensions.Common.Localization
 #### LocalizationExtension  #### 
 `LocalizationExtension` provides extenions methods for converting nullable built-in types 
-or present presenting them as localized strings. ([source](\Extensions.Common\Localization\LocalizationExtension.cs))
+or presenting them as localized strings. ([source](\Extensions.Common\Localization\LocalizationExtension.cs))
 
 ###
 
