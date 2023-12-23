@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 using System.Globalization;
 
-namespace Ichosys.Extensions.Common.UnitTest
+namespace Ichosys.Extensions.Common.Test
 {
     [TestClass]
     public class LocalizationTests

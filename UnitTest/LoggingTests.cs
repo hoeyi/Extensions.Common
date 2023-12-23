@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Ichosys.Extensions.Common.Logging;
 
-namespace Ichosys.Extensions.Common.UnitTest
+namespace Ichosys.Extensions.Common.Test
 {
     [TestClass]
     public class LoggingTests
