@@ -9,7 +9,8 @@
 
         <PackageId>Ichosys.Extensions.Common</PackageId>
         <BuildNumber Condition="$(BuildNumber) == ''">0</BuildNumber>
-        <BuildNumber>$([System.DateTime]::UtcNow.ToString(mmff))</BuildNumber>
+        <!--Comment out build number to avoid auto-updating project build properties. Uncomment for release builds only.-->
+        <!--<BuildNumber>$([System.DateTime]::UtcNow.ToString(mmff))</BuildNumber>-->
         <Authors>hoeyi</Authors>
         <Company>hoeyi</Company>
         <Product>Ichosys.Extensions.Common</Product>
